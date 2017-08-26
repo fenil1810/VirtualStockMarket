@@ -9,12 +9,22 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular/core");
 const platform_browser_1 = require("@angular/platform-browser");
 const app_component_1 = require("./app.component");
+const forms_1 = require("@angular/forms");
+const router_1 = require("@angular/router");
+const http_1 = require("@angular/http");
+const PortfolioComponent_1 = require("./Components/PortfolioComponent");
+const common_1 = require("@angular/common");
+exports.appRoutes = [
+    { path: '', redirectTo: ' ', pathMatch: 'full' },
+    { path: 'Portfolio', component: PortfolioComponent_1.PortfolioComponent },
+];
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent],
+        imports: [router_1.RouterModule.forRoot(exports.appRoutes), platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
+        providers: [common_1.Location, { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }],
+        declarations: [app_component_1.AppComponent, PortfolioComponent_1.PortfolioComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
