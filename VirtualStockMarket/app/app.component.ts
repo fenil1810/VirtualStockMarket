@@ -11,6 +11,7 @@ import { HashLocationStrategy, Location, LocationStrategy } from '@angular/commo
     template: ` <div>
         <h1>Menu</h1>
     <a (click)="NavigateToPortfolio()">Portfolio</a>
+    <a (click)="NavigateToTrade()">Trade</a>
     <router-outlet></router-outlet>
 </div> `
 })
@@ -19,6 +20,10 @@ export class AppComponent {
     constructor(private _router: Router, location: Location) { this.location = location; }
     public NavigateToPortfolio() {
         this._router.navigate(['Portfolio']);
+
+    }
+    public NavigateToTrade() {
+        this._router.navigate(['Trade']);
 
     }
 }

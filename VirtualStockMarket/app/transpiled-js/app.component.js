@@ -20,6 +20,9 @@ let AppComponent = class AppComponent {
     NavigateToPortfolio() {
         this._router.navigate(['Portfolio']);
     }
+    NavigateToTrade() {
+        this._router.navigate(['Trade']);
+    }
 };
 AppComponent = __decorate([
     core_1.Component({
@@ -29,6 +32,7 @@ AppComponent = __decorate([
         template: ` <div>
         <h1>Menu</h1>
     <a (click)="NavigateToPortfolio()">Portfolio</a>
+    <a (click)="NavigateToTrade()">Trade</a>
     <router-outlet></router-outlet>
 </div> `
     }),

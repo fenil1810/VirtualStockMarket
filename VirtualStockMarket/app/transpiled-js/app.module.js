@@ -13,10 +13,12 @@ const forms_1 = require("@angular/forms");
 const router_1 = require("@angular/router");
 const http_1 = require("@angular/http");
 const PortfolioComponent_1 = require("./Components/PortfolioComponent");
+const TradeComponent_1 = require("./Components/TradeComponent");
 const common_1 = require("@angular/common");
 exports.appRoutes = [
     { path: '', redirectTo: ' ', pathMatch: 'full' },
     { path: 'Portfolio', component: PortfolioComponent_1.PortfolioComponent },
+    { path: 'Trade', component: TradeComponent_1.TradeComponent },
 ];
 let AppModule = class AppModule {
 };
@@ -24,7 +26,7 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [router_1.RouterModule.forRoot(exports.appRoutes), platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
         providers: [common_1.Location, { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }],
-        declarations: [app_component_1.AppComponent, PortfolioComponent_1.PortfolioComponent],
+        declarations: [app_component_1.AppComponent, PortfolioComponent_1.PortfolioComponent, TradeComponent_1.TradeComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
