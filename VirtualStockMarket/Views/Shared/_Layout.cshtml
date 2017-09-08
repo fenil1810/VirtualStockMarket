@@ -11,7 +11,24 @@
 	<script src="../node_modules/zone.js/dist/zone.js"></script>
 	<script src="../node_modules/reflect-metadata/Reflect.js"></script>
 	<script src="../node_modules/systemjs/dist/system.src.js"></script>
-
+	<link href="../Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom fonts for this template -->
+	<link href="../../Content/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- Plugin CSS -->
+	<link href="../../Content/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="../../Content/css/sb-admin.css" rel="stylesheet">
+	<!-- Bootstrap core JavaScript -->
+	<script src="../../Content/vendor/jquery/jquery.min.js"></script>
+	<script src="../../Content/vendor/popper/popper.min.js"></script>
+	<script src="../../Content/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!-- Plugin JavaScript -->
+	<script src="../../Content/vendor/jquery-easing/jquery.easing.min.js"></script>
+	<script src="../../Content/vendor/chart.js/Chart.min.js"></script>
+	<script src="../../Content/vendor/datatables/jquery.dataTables.js"></script>
+	<script src="../../Content/vendor/datatables/dataTables.bootstrap4.js"></script>
+	<!-- Custom scripts for this template -->
+	<script src="../../Content/js/sb-admin.min.js"></script>
 	<!--
 
 	<script src="/libs/angular2-polyfills.js"></script>
@@ -28,24 +45,6 @@
 
 </head>
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-					<li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
-				</ul>
-			</div>
-		</div>
-	</div>
 	<div class="container body-content">
 		@RenderBody()
 		<hr />
