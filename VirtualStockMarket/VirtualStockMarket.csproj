@@ -402,6 +402,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\Components\FeedbackComponent.ts" />
     <TypeScriptCompile Include="app\Components\PortfolioComponent.ts" />
     <TypeScriptCompile Include="app\Components\TradeComponent.ts" />
     <TypeScriptCompile Include="app\main.ts" />

@@ -23,6 +23,9 @@ let AppComponent = class AppComponent {
     NavigateToTrade() {
         this._router.navigate(['Trade']);
     }
+    NavigateToFeedback() {
+        this._router.navigate(['Feedback']);
+    }
 };
 AppComponent = __decorate([
     core_1.Component({
@@ -83,6 +86,7 @@ AppComponent = __decorate([
     <h1>Menu</h1>
     <a (click)="NavigateToPortfolio()">Portfolio</a>
     <a (click)="NavigateToTrade()">Trade</a>
+    <a (click)="NavigateToFeedback()">Feedback</a>
     <router-outlet></router-outlet>
 
         <div class="container-fluid">
