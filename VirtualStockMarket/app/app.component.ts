@@ -4,6 +4,7 @@ import { Observable, Subject } from 'rxjs/Rx';
 import { RouterModule, Router } from '@angular/router';
 import { HashLocationStrategy, Location, LocationStrategy } from '@angular/common';
 
+
 @Component({
     selector: 'my-app',
     //templateUrl: './Content/index.html'
@@ -58,7 +59,7 @@ import { HashLocationStrategy, Location, LocationStrategy } from '@angular/commo
             </ul>
         </div>
     </nav>
-    <div style="height:1200px;width:1100px" class="content-wrapper py-3">
+    <div style="height:1200px;width:800px" class="content-wrapper py-3">
     <h1>Menu</h1>
     <a (click)="NavigateToPortfolio()">Portfolio</a>
     <a (click)="NavigateToTrade()">Trade</a>

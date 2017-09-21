@@ -15,20 +15,24 @@ const http_1 = require("@angular/http");
 const PortfolioComponent_1 = require("./Components/PortfolioComponent");
 const FeedbackComponent_1 = require("./Components/FeedbackComponent");
 const TradeComponent_1 = require("./Components/TradeComponent");
+const StockDataComponent_1 = require("./Components/StockDataComponent");
+const StockDataService_1 = require("./Service/StockDataService");
+const PortfolioService_1 = require("./Service/PortfolioService");
 const common_1 = require("@angular/common");
 exports.appRoutes = [
     { path: '', redirectTo: ' ', pathMatch: 'full' },
     { path: 'Portfolio', component: PortfolioComponent_1.PortfolioComponent },
     { path: 'Trade', component: TradeComponent_1.TradeComponent },
     { path: 'Feedback', component: FeedbackComponent_1.FeedbackComponent },
+    { path: 'StockData', component: StockDataComponent_1.StockDataComponent },
 ];
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     core_1.NgModule({
         imports: [router_1.RouterModule.forRoot(exports.appRoutes), platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
-        providers: [common_1.Location, { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }],
-        declarations: [app_component_1.AppComponent, PortfolioComponent_1.PortfolioComponent, TradeComponent_1.TradeComponent, FeedbackComponent_1.FeedbackComponent],
+        providers: [StockDataService_1.StockDataService, PortfolioService_1.PortfolioService, common_1.Location, { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }],
+        declarations: [app_component_1.AppComponent, PortfolioComponent_1.PortfolioComponent, TradeComponent_1.TradeComponent, FeedbackComponent_1.FeedbackComponent, StockDataComponent_1.StockDataComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

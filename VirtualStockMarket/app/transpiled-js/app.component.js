@@ -82,11 +82,10 @@ AppComponent = __decorate([
             </ul>
         </div>
     </nav>
-    <div style="height:1200px;width:1100px" class="content-wrapper py-3">
+    <div style="height:1200px;width:800px" class="content-wrapper py-3">
     <h1>Menu</h1>
     <a (click)="NavigateToPortfolio()">Portfolio</a>
     <a (click)="NavigateToTrade()">Trade</a>
-    <a (click)="NavigateToFeedback()">Feedback</a>
     <router-outlet></router-outlet>
 
         <div class="container-fluid">
@@ -133,6 +132,7 @@ AppComponent = __decorate([
             <h1>Menu</h1>
         <a (click)="NavigateToPortfolio()">Portfolio</a>
         <a (click)="NavigateToTrade()">Trade</a>
+        <a (click)="NavigateToFeedback()">Feedback</a>
         <router-outlet></router-outlet>
     </div> `*/
     }),

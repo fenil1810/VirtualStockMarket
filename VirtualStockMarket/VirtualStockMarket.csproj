@@ -153,6 +153,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\PortfoliosController.cs" />
+    <Compile Include="Controllers\StockDatasController.cs" />
     <Compile Include="Controllers\UserInformationsController.cs" />
     <Compile Include="Controllers\UserLoginsController.cs" />
     <Compile Include="Models\AdminLogin.cs" />
@@ -404,8 +406,13 @@
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\Components\FeedbackComponent.ts" />
     <TypeScriptCompile Include="app\Components\PortfolioComponent.ts" />
+    <TypeScriptCompile Include="app\Components\StockDataComponent.ts" />
     <TypeScriptCompile Include="app\Components\TradeComponent.ts" />
     <TypeScriptCompile Include="app\main.ts" />
+    <TypeScriptCompile Include="app\Models\Portfolio.ts" />
+    <TypeScriptCompile Include="app\Models\StockData.ts" />
+    <TypeScriptCompile Include="app\Service\PortfolioService.ts" />
+    <TypeScriptCompile Include="app\Service\StockDataService.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

@@ -12,45 +12,45 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular/core");
 require("rxjs/add/operator/switchMap");
 const router_1 = require("@angular/router");
-const PortfolioService_1 = require("../Service/PortfolioService");
+const StockDataService_1 = require("../Service/StockDataService");
 const common_1 = require("@angular/common");
-let PortfolioComponent = class PortfolioComponent {
-    constructor(portfolioService, _router, location) {
-        this.portfolioService = portfolioService;
+let StockDataComponent = class StockDataComponent {
+    constructor(stockdataService, _router, location) {
+        this.stockdataService = stockdataService;
         this._router = _router;
-        this.portfolio = [];
+        this.stockdata = [];
         this.refresh();
         this.location = location;
     }
     refresh() {
-        this.portfolioService.LoadData().then(data => {
-            this.portfolio = data;
+        this.stockdataService.LoadData().then(data => {
+            this.stockdata = data;
         });
     }
 };
-PortfolioComponent = __decorate([
+StockDataComponent = __decorate([
     core_1.Component({
-        selector: 'portfolio',
+        selector: 'StockData',
         providers: [common_1.Location, { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }],
-        template: `<div>
+        template: ` <div>
     <h2>Stock Data</h2>
        <table class="table">
             <tr>
                 <th>Stock Name</th>
-                <th>Quantity</th>
-                <th>Total Price</th>
-                <th>Your BidPrice</th>
+                <th>Stock Type</th>
+                <th>Price</th>
+                <th>Volume</th>
             </tr>
-            <tr *ngFor="let pf of portfolio">
-                <td>{{pf.StockName}}</td>
-                <td>{{pf.ShareQuantity}}</td>
-                <td>{{pf.TotalPrice}}</td>
-                <td>{{pf.BidPrice}}</td>
+            <tr *ngFor="let st of stockdata">
+                <td>{{st.StockName}}</td>
+                <td>{{st.StockType}}</td>
+                <td>{{st.MarketPrice}}</td>
+                <td>{{st.TotalVolume}}</td>
             </tr>
         </table>
 </div>`,
     }),
-    __metadata("design:paramtypes", [PortfolioService_1.PortfolioService, router_1.Router, common_1.Location])
-], PortfolioComponent);
-exports.PortfolioComponent = PortfolioComponent;
-//# sourceMappingURL=PortfolioComponent.js.map
+    __metadata("design:paramtypes", [StockDataService_1.StockDataService, router_1.Router, common_1.Location])
+], StockDataComponent);
+exports.StockDataComponent = StockDataComponent;
+//# sourceMappingURL=StockDataComponent.js.map
