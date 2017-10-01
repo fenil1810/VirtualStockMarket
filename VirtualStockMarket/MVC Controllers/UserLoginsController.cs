@@ -35,7 +35,7 @@ namespace VirtualStockMarket.Controllers
             }
             else
             {
-                return View("UserInformations/Create");
+                return View("Portfolios/Index");
             }
 
         }

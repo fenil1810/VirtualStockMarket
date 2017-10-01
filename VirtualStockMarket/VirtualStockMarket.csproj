@@ -155,8 +155,9 @@
   <ItemGroup>
     <Compile Include="Controllers\PortfoliosController.cs" />
     <Compile Include="Controllers\StockDatasController.cs" />
-    <Compile Include="Controllers\UserInformationsController.cs" />
-    <Compile Include="Controllers\UserLoginsController.cs" />
+    <Compile Include="Controllers\UserInformations1Controller.cs" />
+    <Compile Include="MVC Controllers\Portfolios1Controller.cs" />
+    <Compile Include="MVC Controllers\UserLoginsController.cs" />
     <Compile Include="Models\AdminLogin.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -200,6 +201,9 @@
     <Compile Include="Models\OrderTable.cs" />
     <Compile Include="Models\Portfolio.cs" />
     <Compile Include="Models\Register.cs" />
+    <Compile Include="MVC Controllers\PortfoliosController.cs" />
+    <Compile Include="MVC Controllers\StockDatasController.cs" />
+    <Compile Include="MVC Controllers\UserInformationsController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\SellingTable.cs" />
     <Compile Include="Models\StockData.cs" />
@@ -210,7 +214,6 @@
     <Compile Include="Models\Valuation.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\index.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -391,6 +394,14 @@
     <Content Include="Views\UserInformations\Details.cshtml" />
     <Content Include="Views\UserInformations\Edit.cshtml" />
     <Content Include="Views\UserInformations\Index.cshtml" />
+    <Content Include="Views\StockDatas\Details.cshtml" />
+    <Content Include="Views\StockDatas\Index.cshtml" />
+    <Content Include="Views\Portfolios\Details.cshtml" />
+    <Content Include="Views\UserLogins\Create.cshtml" />
+    <Content Include="Views\UserLogins\Delete.cshtml" />
+    <Content Include="Views\UserLogins\Details.cshtml" />
+    <Content Include="Views\UserLogins\Edit.cshtml" />
+    <Content Include="Views\UserLogins\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -400,19 +411,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="app\app.component.ts" />
-    <TypeScriptCompile Include="app\app.module.ts" />
-    <TypeScriptCompile Include="app\Components\FeedbackComponent.ts" />
-    <TypeScriptCompile Include="app\Components\PortfolioComponent.ts" />
-    <TypeScriptCompile Include="app\Components\StockDataComponent.ts" />
-    <TypeScriptCompile Include="app\Components\TradeComponent.ts" />
-    <TypeScriptCompile Include="app\main.ts" />
-    <TypeScriptCompile Include="app\Models\Portfolio.ts" />
-    <TypeScriptCompile Include="app\Models\StockData.ts" />
-    <TypeScriptCompile Include="app\Service\PortfolioService.ts" />
-    <TypeScriptCompile Include="app\Service\StockDataService.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

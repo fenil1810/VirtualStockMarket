@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using VirtualStockMarket;
 
-namespace VirtualStockMarket.Controllers
+namespace VirtualStockMarket.MVC_Controllers
 {
     public class UserInformationsController : Controller
     {
@@ -43,37 +43,18 @@ namespace VirtualStockMarket.Controllers
 
         // POST: UserInformations/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Register regi)
+        public ActionResult Create([Bind(Include = "UserId,FirstName,LastName,HouseNo,Society,Landmark,Area,City,State,Zipcode,Mobile,Email,Gender,Category")] UserInformation userInformation)
         {
-            UserInformation userInformation = new UserInformation();
-            userInformation.FirstName = regi.FirstName;
-            userInformation.LastName = regi.LastName;
-            userInformation.HouseNo = regi.HouseNo;
-            userInformation.Society = regi.Society;
-            userInformation.Landmark = regi.Landmark;
-            userInformation.Area = regi.Area;
-            userInformation.City = regi.City;
-            userInformation.State = regi.State;
-            userInformation.Zipcode = regi.Zipcode;
-            userInformation.Mobile = regi.Mobile;
-            userInformation.Email = regi.Email;
-            userInformation.Gender = regi.Gender;
-
-            UserLogin userLogin = new UserLogin();
-            userLogin.UserName = regi.UserName;
-            userLogin.Password = regi.Password;
             if (ModelState.IsValid)
             {
                 db.UserInformations.Add(userInformation);
                 db.SaveChanges();
-                db.UserLogins.Add(userLogin);
-                db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            
+
             return View(userInformation);
         }
 
@@ -94,7 +75,7 @@ namespace VirtualStockMarket.Controllers
 
         // POST: UserInformations/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "UserId,FirstName,LastName,HouseNo,Society,Landmark,Area,City,State,Zipcode,Mobile,Email,Gender,Category")] UserInformation userInformation)
